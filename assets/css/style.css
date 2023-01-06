@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --fundoAmarelo: #FFD900;
+    --timerRoxo-: #514988;
+    --brancoTextos: white;
+    --textoRosa-: #E33881;
+    --textoAmarelo-: #F3C61F;
+    
+
+}
+
+
+/* Geral */
+body {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    
+
+}
+
+
+
+/* Cabeçalho Amarelo */
+header {
+
+    background-color: var(--fundoAmarelo);
+    width: 100%;
+    height: 118px;
+}
+
+/* Definição do tamanho do Logo*/
+#logo {
+    margin-left: 40px;
+    margin-top: 20px;
+    width: 300px;
+    height: 75px;
+}
+
+/* Lado A: Conteúdo Geral*/
+.cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+}
+
+/* Configuração Geral  textos do conteúdo*/
+.contTextos {
+    background-color: var(--timerRoxo-);
+    text-align: center;
+    padding: 10px;
+    color: var(--brancoTextos);
+
+
+}
+
+/*Configuração do titulo do conteúdo */
+.contTitulo {
+
+    font-size: 70px;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    color: var(--textoAmarelo-);
+    /* Transformando em maisculas todas as letras*/
+    text-transform: uppercase;
+}
+
+/*Configuração do subtitulo do conteúdo  */
+.contSubTitulo {
+    /* Transformando em maisculas todas as letras*/
+    text-transform: uppercase;
+    font-size: 30px;
+
+}
+
+/*Configuração da frase do conteúdo  */
+.contFrase {
+    font-size: 25px;
+    padding-top: 65px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-weight: 400;
+    
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/*Lado B: Lado das animações */
+.contAnimacao {
+
+    text-align: center;
+    margin: 10px;
+
+}
+
+/*Contador regressivo*/
+.timer {
+    align-items: center;
+    display: inline-block;
+    padding-right: 15px;
+    color: var(--timerRoxo-);
+    font-size: 50px;
+
+}
+
+/*Texto do contador*/
+.timerText {
+    
+    color: var(--textoRosa-);
+    font-size: 27px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    
+}
+.timerText:first-of-type{
+    
+    animation: showup 7s infinite;
+}
+.timerText:last-of-type{
+    width:0px;
+    animation: reveal 7s infinite;
+
+}
+.timerText:last-of-type span{
+    margin-left:-10%;
+    animation: slidein 8s infinite;
+}
+
+/* Video do contador*/
+.contVideo {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*Rodapé*/
+.sessao {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 3fr 2fr;
+    padding: 5px;
+    align-items: center;
+
+}
+
+/*Geral rodapé*/
+.sessaoTexto {
+    margin-left: 10px;
+
+}
+
+/*Rodapé Titulo*/
+.sessaoTitulo {
+    font-size: 27px;
+    color: var(--textoAmarelo-);
+    height: 30px;
+    line-height: 30px;
+    
+
+}
+
+.slides {
+    display: inline-flex;
+    height: 30px;
+    overflow: hidden;
+    padding: 0 5px;
+    margin: 0 -5px;
+    font-size: 27px;
+    text-align: left;
+
+
+
+}
+
+.slide1 {
+
+    display: flex;
+    flex-flow: column nowrap;
+    transform: translateY(100%);
+    animation: slide-up 9s ease infinite;
+
+
+}
+
+
+
+
+/*Imagem*/
+.sessaoImg {
+    margin-top: 40px;
+    width: 204px;
+    height: 204px;
+}
+
+/*Botão*/
+.botao {
+    background-color: var(--timerRoxo-);
+    color: var(--brancoTextos);
+    font-size: 30px;
+    border-radius: 20px;
+    width: 586px;
+    height: 138px;
+    border-style: none;
+    margin-top: 60px;
+
+}
+
+/*Animação do mouse e mudança de cor*/
+.botao:hover {
+    color: var(--textoAmarelo-);
+    cursor: pointer;
+}
+
+.card-highlight {
+    box-shadow: 10px 9px 9px 9px grey;
+}
+.card-selected{
+    border: 5px solid green;
+}
+
+.rodape{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: row;
+    text-align: center;
+    background-color: var(--fundoAmarelo);
+    width: 100%;
+   
+}
+
+
+
+input{
+    background: var(--timerRoxo-) ;
+    border-radius: 10px;
+    color: var(--brancoTextos);
+    border: 0pt;
+    margin: 30px;
+    width: 300px;
+    height: 70px;
+    font-size: 30px; 
+}
+
+
+/* Jaba ou propaganda*/
+#jaba {
+
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+    margin-bottom: 1px;
+    text-align: center;
+
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-200%; }
+    20% { margin-left:-80%; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:50%;}
+    80% {opacity:1;}
+    90% {opacity:1;width:100%;}
+    100% {opacity:0;width:100%;}
+}
+
+@keyframes slide-up {
+    15%, 33% {
+        transform: translateY(-0%);
+    }
+
+    45%, 66% {
+        transform: translateY(-100%);
+    }
+
+    76%, 100% {
+        transform: translateY(-200%);
+    }
+
+}

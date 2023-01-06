@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id="title">CCXP23
+    </title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="assets/imgs/logo.png" alt="Logo da empresa">
+    </header>
+    <main class="cont">
+        <div class="contTextos">
+            <h1 class="contTitulo">Reviva o épico</h1>
+            <span class="contSubTitulo">De 01 a 04 de dezembro </span>
+            <p class="contFrase">Você consegue sentir?
+                É aquela sensação de finalmente poder falar em voz alta:
+                "estamos em casa". Sim, em dezembro de 2023, teremos a volta da CCXP física.
+                Mas não será qualquer CCXP, vai ser a maior de todos os tempos.
+                Prepare-se para visitar seus universos favoritos, explorar o Artists' Valley, se emocionar
+                nos auditórios e encontrar aventuras épicas a cada passo pelos nossos corredores.</p>
+        </div>
+        <div class="contAnimacao">
+            <div class="timer">
+                <ul>
+                    <li id="dia" class="timer">00</li>
+                    <li id="hora" class="timer">00</li>
+                    <li id="minuto" class="timer">00</li>
+                    <li id="segundo" class="timer">00</li>
+                </ul>
+                <p class="timerText"> PARA A MAIOR CCXP <span> DE TODOS OS TEMPOS </span></p>
+            </div>
+            <video autoplay controls loop class="contVideo">
+                <source src="assets/imgs/Arlequina.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+    <section class="sessao">
+        <div class="sessaoTexto">
+            <p class="sessaoTitulo">AINDA DÁ TEMPO DE GARANTIR O SEU,
+                <span class="slides">
+                    <span class="slide1">
+                        <span>
+                            MAS CORRE!
+                        </span>
+                        <span>
+                            MAS CORRE LOGO!
+                        </span>
+                        <span>
+                            MAS CORRE MESMO!
+                        </span>
+                    </span>
+                </span>
+            </p>
+
+            <div>
+                <img id="quinta" class="sessaoImg" onclick="selectCard('#quinta')" src="assets/imgs/quinta.svg"
+                    onmouseover="highlightCard('#quinta')" onmouseout="highlightCard('#quinta')" alt="">
+                <img id="sexta" class="sessaoImg" onclick="selectCard('#sexta')" src="assets/imgs/sexta.svg"
+                    onmouseover="highlightCard('#sexta')" onmouseout="highlightCard('#sexta')" alt="">
+                <img id="sabado" class="sessaoImg" onclick="selectCard('#sabado')" src="assets/imgs/sabado.svg"
+                    onmouseover="highlightCard('#sabado')" onmouseout="highlightCard('#sabado')" alt="">
+                <img id="domingo" class="sessaoImg" onclick="selectCard('#domingo')" src="assets/imgs/domingo.svg"
+                    onmouseover="highlightCard('#domingo')" onmouseout="highlightCard('#domingo')" alt="">
+            </div>
+        </div>
+        <!-- Botão Garanta o Seu -->
+        <button onclick="showSelectedCards()" class="botao">GARANTA O SEU</button>
+
+    </section>
+    <footer class="rodape">
+        <div>
+            <form action="https://www.google.com">
+                <input type="email" required placeholder="Seu e-mail" value="">
+                <input type="submit">
+
+            </form>
+        </div>
+        <div id="jaba">© Eduardo "The Dangerous"!</div>
+    </footer>
+
+
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
